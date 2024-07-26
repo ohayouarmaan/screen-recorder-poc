@@ -1,0 +1,15 @@
+[package]
+name = "texture_copying"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = "0.20.1"
+futures = "0.3"
+rand = "0.8"
+tokio = { version = "1", features = ["full"] }
+crabgrab = { version = "0.4.0", features = ["wgpu"] }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = { version = "0.58.0", features = ["Data_Xml_Dom", "Win32_Foundation", "Win32_Security", "Win32_System_Threading", "Win32_UI_WindowsAndMessaging"] }
+winapi = { version = "0.3", features = ["audiosessiontypes", "audioclient", "coml2api", "combaseapi", "debug", "devpkey", "handleapi", "ksmedia", "mmdeviceapi", "objbase", "std", "synchapi", "winbase", "winuser"] }
